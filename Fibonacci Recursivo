@@ -1,0 +1,8 @@
+def fibRecursivo(n:Int):Int = {
+  if(n>1){
+    fibRecursivo(n-1) + fibRecursivo(n-2)
+  }else{
+    1
+  }
+}
+println(fibRecursivo(6))
