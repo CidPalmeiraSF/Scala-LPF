@@ -1,0 +1,13 @@
+def CDB(n:Int):Int = {
+ 
+  if(n>1){
+    (n%2) + (CDB(n/2)*10)
+  }else{
+    if(n==1){
+      1
+    }
+    else 0
+  }
+}
+
+println(CDB(20))
