@@ -1,0 +1,10 @@
+def mdc(a:Int, b:Int):Int = {
+  if(a%b == 0){
+    b
+  }
+  else{
+    mdc(b,a%b)
+  }
+}
+
+println(mdc(48,30))
