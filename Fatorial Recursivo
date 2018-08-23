@@ -1,0 +1,8 @@
+def fatorial(n:Int):Int = {
+  if(n>0){
+    fatorial(n-1)*n
+  }else{
+    1
+  }
+}
+println(fatorial(10))
