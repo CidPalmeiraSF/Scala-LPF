@@ -1,0 +1,10 @@
+def calculaPA(a:Int, r:Int, n:Int):Int = {
+
+  if(n == 1){
+    a
+  }else{
+    calculaPA(a+r,r,n-1)
+  }
+}
+
+println(calculaPA(3,2,3))
