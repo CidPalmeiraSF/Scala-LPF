@@ -1,0 +1,12 @@
+type FInt = Int => Int
+
+def f(x:Int):Int = x+1
+
+def soma(f:FInt, a:Int, b:Int):Int = {
+  if( b!=a)
+    f(b)+soma(f,a,b-1)
+  else
+    f(a)
+}
+
+println(soma(f,1,3))
