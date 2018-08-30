@@ -1,0 +1,9 @@
+type FInt = Int => Int
+
+def maior(f:FInt, g:FInt):FInt = {
+  (x:Int) => x
+  if (f(x)>g(x))
+    f(x)
+  else
+    g(x)
+}
