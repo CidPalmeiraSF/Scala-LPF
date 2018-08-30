@@ -1,0 +1,11 @@
+type FInt = Int => Int
+
+def f(x:Int):Int = x + 1
+
+def g(x:Int):Int = 2*x
+
+def media(f:FInt, g:FInt):FInt = {
+  (x:Int) => (f(x)+g(x))/2
+}
+
+println(media(f,g)(2))
