@@ -1,0 +1,13 @@
+//. elemento: recebe uma lista e um número inteiro positivo para retornar o n-ésimo elemento
+//da lista
+//ex.: (elemento 1 '(3 7 4 2)) ==> 3 
+
+def elemento(l:List[Int], n:Int):Int = {
+  if (n > 0)
+    elemento(l.tail, n-1)
+  else
+    l.head
+}
+
+val lista1: List[Int] = List(1,2,3,4)
+println(elemento(lista1,1))
