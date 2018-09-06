@@ -1,0 +1,13 @@
+
+def contaOcorrencias(n:Int, l:List[Int]):Int = {
+  if(l.isEmpty)
+    0
+  else
+    if(l.head == n)
+    contaOcorrencias(n,l.tail) + 1
+    else
+    contaOcorrencias(n,l.tail)
+}
+
+val lista1: List[Int] = List(1,2,3,4,5,6,7,1,1,1,1)
+println(contaOcorrencias(1,lista1))
