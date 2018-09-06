@@ -1,0 +1,16 @@
+
+def maiorq(n:Int, l:List[Int]):List[Int] = {
+  if(l.isEmpty){
+    List()
+  }else
+    if(l.head > n){
+      l.head::
+      maiorq(n,l.tail)
+    }else{
+      maiorq(n,l.tail)
+    }
+}
+
+
+val lista1: List[Int] = List(2,3,5,3,12,5,6,4,8,9,10,2,30)
+println(maiorq(10,lista1))
