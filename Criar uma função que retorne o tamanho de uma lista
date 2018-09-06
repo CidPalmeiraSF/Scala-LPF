@@ -1,0 +1,9 @@
+def tamanho(l:List[Any]):Int = {
+  if(l.isEmpty)
+    0
+  else
+  tamanho(l.tail)+1
+}
+
+val lista1: List[Int] = List(1,2,3,4,5,6,7)
+println(tamanho(lista1))
