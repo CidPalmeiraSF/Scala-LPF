@@ -1,0 +1,12 @@
+def remove(n:Int, l:List[Int]):List[Int] = {
+  if(l.isEmpty)
+    l
+  else
+    if(l.head == n)
+      l.tail
+    else
+    l.head::
+    remove(n, l.tail)
+}
+val lista1: List[Int] = List(1,0,30,2,5,6,2,5,6,12,3,5,9)
+println(remove(2,lista1))
