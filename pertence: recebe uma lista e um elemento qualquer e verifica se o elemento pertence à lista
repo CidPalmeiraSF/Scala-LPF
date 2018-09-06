@@ -1,0 +1,12 @@
+def pertence(l:List[Int], n:Int):Boolean={
+  if (l.head == n)
+    true
+  else
+    if (l.isEmpty)
+      false
+    else
+      pertence(l.tail,n)
+}
+
+val lista1: List[Int] = List(1,2,3,4)
+println(pertence(lista1,1))
