@@ -1,0 +1,13 @@
+def removeU(l:List[Int]):List[Int] = {
+  if(l.isEmpty)
+    l
+  else
+    if(l.tail.isEmpty)
+      removeU(l.tail)
+    else
+      l.head::
+      removeU(l.tail)
+      
+}
+val lista1: List[Int] = List(2,3,5,9,12,20,33)
+println(removeU(lista1))
