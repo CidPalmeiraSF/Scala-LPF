@@ -1,0 +1,10 @@
+def removerRepetido(l:List[Any]):List[Any]={
+  l match{
+    case Nil => Nil
+    case head::tail => if(tail.contains(head)) removerRepetido(tail) else head::removerRepetido(tail)
+  }
+}
+
+val lista1:List[Int] = List(1,1,2,3,2,3,3,5,6,2,1,4,5,8)
+
+println(removerRepetido(lista1))
