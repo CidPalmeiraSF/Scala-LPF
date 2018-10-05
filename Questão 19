@@ -1,0 +1,20 @@
+type Tupla = (List[Int],List[Int])
+
+def divide(l:List[Int],n:Int):Tupla ={
+  def take(n:Int, l:List[Int]):List[Int]={
+    l match {
+      case Nil => Nil
+      case head::tail => if(n!=0) head::take(n-1,l) else Nil
+    }
+  }
+    
+  def retiraTake(n:Int, l:List[Int]):List[Int]={
+    l match {
+     case Nil => Nil
+     case head::tail => if(n!=0) retiraTake(n-1,l) else l
+    }
+  } 
+  (take(n,l),retiraTake(n,l))
+}
+
+println(divide(List(1,2,3,4,5,6),5))
