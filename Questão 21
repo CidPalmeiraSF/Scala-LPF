@@ -1,0 +1,17 @@
+def concatena(l:List[Int], m:List[Int]):List[Int] ={
+  l++m
+}
+def removeRepetidos(l:List[Int]):List[Int] ={
+  l match{
+    case Nil => Nil
+    case head::tail => if(tail.contains(head)) removeRepetidos(tail) else head::removeRepetidos(tail)
+  }
+}
+def uniao(l:List[Int], m:List[Int]):List[Int] ={
+  (l,m) match {
+    case (Nil, Nil) =>Nil
+    case _=>removeRepetidos(concatena(l,m))
+  }
+}
+
+println(uniao(List(3,6,5,7),List(2,9,7,5,1)))
