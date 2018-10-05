@@ -1,0 +1,8 @@
+def concatena(l:List[Int], m:List[Int]):List[Int] ={
+  l++m
+}
+
+val lista1:List[Int] = List(1,2,3)
+val lista2:List[Int] = List(4,5,6)
+
+println(concatena(lista1,lista2))
