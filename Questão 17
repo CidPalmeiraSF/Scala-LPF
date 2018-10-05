@@ -1,0 +1,8 @@
+def geraSequencia(n:Int):List[Int]={
+  n match{
+    case 0 => Nil
+    case _=> geraSequencia(n-1)++List(n,-n)
+  }
+}
+
+println(geraSequencia(5))
