@@ -1,0 +1,8 @@
+def inverte(l:List[Int]):List[Int] ={
+  l match {
+    case Nil => Nil
+    case head::tail => if(head == Nil) Nil  else inverte(tail):::List(head)}
+}
+
+val lista1:List[Int] = List(5,4,3,2,1)
+print(inverte(lista1))
