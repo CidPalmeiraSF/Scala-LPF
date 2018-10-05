@@ -1,0 +1,10 @@
+def remover(n:Any, l:List[Any]):List[Any]={
+  l match{
+    case Nil => Nil
+    case head::tail => if(head==n) tail else head::remover(n,tail)
+  }
+}
+
+val lista1:List[Int] = List(1,2,3)
+
+println(remover(1,lista1))
