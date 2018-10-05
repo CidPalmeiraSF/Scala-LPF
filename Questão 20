@@ -1,0 +1,8 @@
+def intercala(l:List[Int], m:List[Int]):List[Int]={
+  (l,m) match {
+    case (Nil, Nil) => Nil
+    case _ => l.head::m.head::intercala(l.tail,m.tail)
+  }
+}
+
+println(intercala(List(1,2),List(3,4)))
