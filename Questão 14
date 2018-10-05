@@ -1,0 +1,10 @@
+def removerUltimo(l:List[Any]):List[Any]={
+  l match{
+    case Nil => Nil
+    case head::tail => if(tail==Nil) Nil else head::removerUltimo(tail)
+  }
+}
+
+val lista1:List[Int] = List(1,2,3)
+
+println(removerUltimo(lista1))
