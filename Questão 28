@@ -1,0 +1,20 @@
+def removerUltimo(l:List[Int]):List[Int] = {
+  l match {
+  case Nil => Nil
+  case head::tail => if(tail == Nil) Nil else head::removerUltimo(tail)
+  }
+}
+def ultimo(l:List[Int]):Int ={
+  l match {
+    case Nil => 0
+    case head::tail => if(tail ==Nil) head else ultimo(tail)
+  }
+}
+def rodarDir(k:Int, l:List[Int]):List[Int] ={
+  l match {
+    case Nil => Nil
+    case head::tail => if(k!=0) rodarDir(k-1,ultimo(l)::removerUltimo(l)) else l
+  }
+}
+
+println(rodarDir(1,List(3,4,7,8)))
