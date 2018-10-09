@@ -1,0 +1,8 @@
+def sequencia(n:Int, m:Int):List[Int] ={
+  (n,m) match {
+    case (0,m) => Nil
+    case _=> if(n!=0) m::sequencia(n-1,m+1) else Nil
+  }
+}
+
+println(sequencia(5,1))
