@@ -1,0 +1,9 @@
+def rodarEsq(k:Int, l:List[Any]):List[Any] ={
+  l match {
+    case Nil => Nil
+    case head::tail => if(k!=0) rodarEsq(k-1,tail:::head::Nil) else l
+  }
+}
+
+val lista = List(1,2,3,4)
+println(rodarEsq(3,lista))
