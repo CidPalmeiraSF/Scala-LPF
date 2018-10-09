@@ -1,0 +1,16 @@
+def ordenado(l:List[Int]):Boolean ={
+  l match{
+    case Nil => false
+    case head::Nil => true
+    case head::next::tail => 
+    if(next == Nil) true 
+    else if(head < next){
+      ordenado(tail)
+    }else 
+      false
+  }
+}
+
+val lista = List(3,5,8)
+
+println(ordenado(lista))
