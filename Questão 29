@@ -1,0 +1,13 @@
+def maiuscula(s:String):String ={
+  s match {
+    case "" => ""
+    case _=>{
+      if(s.head >= 'a' && s.head<= 'z')
+      ((s.head-32).toChar + maiuscula(s.tail))
+      else
+      s.head + maiuscula(s.tail)
+    }
+  }
+}
+
+println(maiuscula("abcd g3974*&&$(&yth"))
