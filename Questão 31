@@ -1,0 +1,22 @@
+
+def retornaValor(l:List[Int],k:Int):Int ={
+ l match {
+    case Nil => 0
+    case head::tail => if(k==0) head else retornaValor(l.tail,k-1)
+  }
+}
+
+println(retornaValor(List(12,50,6,8),1))
+
+def seleciona(l:List[Int],k:List[Int]):List[Int] ={
+  (l,k) match {
+    case (Nil,Nil)=>Nil
+    case (l,Nil)=>Nil
+    case (Nil,k) => Nil
+    case _ =>{
+      retornaValor(l,k.head)::seleciona(l,k.tail)
+    }
+  }
+}
+
+println(seleciona(List(117,121,23,55,2,201,3,2,665,210,2),List(0,1,2)))
