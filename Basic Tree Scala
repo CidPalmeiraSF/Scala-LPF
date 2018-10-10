@@ -1,0 +1,11 @@
+class node{}
+
+class treeNode(val n:Int,val left:node,val right:node) extends node{
+  
+}
+
+class emptyNode extends node{
+  
+}
+
+val empty:node = new emptyNode
