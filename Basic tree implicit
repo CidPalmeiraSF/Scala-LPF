@@ -1,0 +1,13 @@
+class node{ }
+
+case class treenode(val n:Int, val left:node=empty, val right:node=empty) extends node{}
+
+case object empty extends node{}
+
+implicit def intToNode(n:Int):treenode ={
+  treenode(n)
+}
+
+val raiz1 = treenode(1,2,3)
+
+println(raiz1)
