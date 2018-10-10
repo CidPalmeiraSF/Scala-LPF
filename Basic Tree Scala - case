@@ -1,0 +1,19 @@
+abstract class node{
+  
+}
+
+case class treenode(val n:Int, val left:node=empty, val right:node=empty) extends node{
+  
+}
+
+case object empty extends node{
+  
+}
+
+val r1 = treenode(1)
+val r2 = treenode(1)
+
+println(r1)
+println(r2)
+println(r1==r2)
+println(r1.equals(r2))
