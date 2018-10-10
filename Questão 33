@@ -1,0 +1,6 @@
+def primo(k:Int, n:Int):Boolean ={
+  if(k%n == 0 && k!=2) false
+  else if(n>k/2) true else primo(k,n+1)
+}
+
+println(primo(15,2))
