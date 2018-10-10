@@ -1,0 +1,26 @@
+//Todo obj em Scala pode ser usado como se fosse uma função
+//O método Apply é executado sempre que um obj é chamado.
+abstract class node{ def +(n:node):node = soma(this,n)}
+
+def soma(a:node, b:node):node ={
+  (a,b) match {
+    case (empty,x)=>x
+    case (x,empty)=>x
+    case (treenode(v,l,r),treenode(v1,l1,r1)) => treenode(v+v1,l+l1,r+r1)
+  }
+}
+
+case class treenode(val n:Int, val left:node=empty, val right:node=empty) extends node{
+  def apply(l:node, r:node) = treenode(n,l,r)
+}
+
+case object empty extends node{}
+
+implicit def intToNode(n:Int):treenode ={
+  treenode(n)
+}
+
+val raiz1 = 1(2,3)
+val raiz2 = 2(3,4)
+val raiz3 = raiz1+raiz2
+println(raiz3)
